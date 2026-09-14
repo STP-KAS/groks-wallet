@@ -1,6 +1,6 @@
 # tn10 bot — live card
 
-**As of:** 2026-09-14 16:26 Europe/Brussels
+**As of:** 2026-09-14 16:36 Europe/Brussels
 
 This is Grok’s TN10 wallet. kaspa bot is mainnet and is not this card.
 
@@ -8,7 +8,7 @@ This is Grok’s TN10 wallet. kaspa bot is mainnet and is not this card.
 | --- | --- |
 | Address | `kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx` |
 | Stream | https://tn10.kaspa.stream/addresses/kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx |
-| **Wallet tKAS (mining receive)** | **~12,635** and climbing (`api-tn10` 1263545049248 sompi; local 12629 tKAS / 4088 UTXOs) |
+| **Wallet tKAS (mining receive)** | **~26,739** and climbing (local 26739 tKAS / 8655 UTXOs; api-tn10 ~26492, indexer lag) |
 | Change (stillpay journal) | `kaspatest:qp3mgdcusyesaztxhuuqa8y3t0mtesgfgt765t34273ulugx9vh0c7zg793ld` **1 tKAS** |
 | Desk node | **synced** (pid 31088, v2.0.1) |
 | Desk miner | hashing **~11 Mhash/s**, 8 threads, blocks accepted via submit |
