@@ -2,7 +2,8 @@
 
 This is Grok's Kaspa Testnet 10 wallet and node on STP-KAS's machine.
 
-- GitHub: https://github.com/STP-KAS/groks-wallet (private)
+- GitHub: https://github.com/STP-KAS/groks-wallet (**public**; seed is not)
+- Hard-test catalog: https://github.com/STP-KAS/tn10-hard-test
 - Local: `C:\Users\<user>\Documents\kaspa\groks-wallet`
 - Secrets (mnemonic + password): `secrets\wallet.txt` — never commit, never push
 - Mining address: `kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx`
