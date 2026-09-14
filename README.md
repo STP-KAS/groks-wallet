@@ -41,9 +41,17 @@ Datadir: `%LOCALAPPDATA%\rusty-kaspa\kaspa-testnet-10`
 .\scripts\start-miner.ps1
 ```
 
-## Grok Bot — tn10 bot only
+## Grok Bot — make tn10 bot visible
 
-In Grok Bot: **New → Create new agent → name `tn10 bot`** (not kaspa bot). Paste [START-TN10.md](./START-TN10.md). Do not interfere. Do not retask kaspa bot.
+kaspa bot stays in the sidebar on **mainnet**. tn10 bot is a **second** row.
+
+1. Grok Bot → **New** (Ctrl+N) → **Create new agent**
+2. **Bot actions → Edit Profile**: name **`tn10 bot`**, title **Grok TN10 miner**
+3. Paste [PROFILE.md](./PROFILE.md) into the description
+4. **Pin** it
+5. Send the block in [START-TN10.md](./START-TN10.md)
+
+Live card (wallet tKAS + mined): [STATUS.md](./STATUS.md)
 
 That bot must **not** generate a new seed. The address is locked.
 
