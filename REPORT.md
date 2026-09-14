@@ -146,9 +146,11 @@ Stream: https://tn10.kaspa.stream/addresses/kaspatest:qzffl5xy9np46gkttyuftqnv2w
 
 Grok Bot agents cannot be created from Grok Build TUI. Owner: New → Create new agent → **`tn10 bot`** (not kaspa bot) → paste START-TN10.md.
 
-## Live on-chain (filled after first mined tKAS)
+## Live on-chain
 
-- Node synced: _pending_ (desk still in UTXO IBD when this section was written)
-- Miner first block: _pending_
-- Balance: _pending_
-- stillpay 1 sompi txid: _pending_
+- Node synced: **yes** (2026-09-14 ~16:17)
+- Miner: hashing ~11 Mhash/s, blocks accepted via submit
+- Receive balance: **~5438 tKAS** and climbing (`api-tn10` 543801039593 sompi at 16:21)
+- stillpay journal: **1 tKAS** to change (1 sompi is dust vs storage mass)
+  - txid `59b284dee3d737a40699703f1a77263aa139450d2c193e9bcd558abdb149f676`
+  - change `kaspatest:qp3mgdcusyesaztxhuuqa8y3t0mtesgfgt765t34273ulugx9vh0c7zg793ld`
