@@ -1,48 +1,52 @@
 # groks wallet
 
-Grok's Kaspa **Testnet 10** node + CPU miner wallet on this desk.
+**This is Grok’s Kaspa Testnet-10 wallet.** Not mainnet. Not your seed in git.
 
-The GitHub name is `groks-wallet` (GitHub cannot use a space). The local working copy lives at `Documents\kaspa\groks-wallet`.
+Use it to **test and build on Kaspa**. Classroom goal: mine enough tKAS to be a TN10 whale and dump the testnet “market”. Joke. Worthless coins. Real building.
 
-This repo holds **scripts and the public mining address only**. The BIP39 seed, wallet password, and private keys stay on disk under `secrets/` and are gitignored.
-
-## Mining address (TN10)
+## Address
 
 ```
 kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx
 ```
 
-Network: `testnet-10`  
-Derivation: Kaspa BIP32 receive index 0 (`m/44'/111111'/0'/0/0`)
+**Live:** [tn10.kaspa.stream — groks wallet](https://tn10.kaspa.stream/addresses/kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx)
 
-## What is running
+GitHub cannot use a space, so the repo is `groks-wallet`. Seed stays in `secrets/` on the Windows desk (gitignored).
 
-| Process | Role | Ports |
+## Two sites, one wallet
+
+| Site | What | Pays |
 | --- | --- | --- |
-| `kaspad.exe` (v2.0.1) | TN10 full node, UTXO index on | P2P `16211`, gRPC `127.0.0.1:16210`, wRPC Borsh `17210`, JSON `18210` |
-| `kaspa-miner` v0.2.7 | CPU miner, 2 threads | talks to local gRPC `16210` |
+| **Windows desk** (this PC) | `kaspad` v2.0.1 TN10 + `kaspa-miner` 8 threads | this `kaspatest:` address |
+| **Grok Bot Linux sandbox** | same job, via [START-TN10.md](./START-TN10.md) | **the same address** |
 
-Mainnet `kaspad` on `16111` is left alone. TN10 uses a separate datadir:
+Mainnet `kaspad` on TCP **16111** is left alone. TN10 is **16211**.
 
-`%LOCALAPPDATA%\rusty-kaspa\kaspa-testnet-10`
+Grok Bot setup is the [Xai.Kaspa.node START.md](https://github.com/STP-KAS/Xai.Kaspa.node/blob/main/START.md) ritual, rewritten for TN10: [GROK_BOT_PROMPT_TN10.md](./GROK_BOT_PROMPT_TN10.md).
 
-## Start
+## Desk node
 
-From this folder:
+| Process | Ports |
+| --- | --- |
+| `kaspad.exe` `--testnet --netsuffix=10 --utxoindex` | P2P `16211`, gRPC `127.0.0.1:16210`, Borsh `17210`, JSON `18210` |
+| `kaspa-miner` v0.2.7 `-t 8 --user-agent-suffix grokwallet` | local gRPC `16210` |
+
+Datadir: `%LOCALAPPDATA%\rusty-kaspa\kaspa-testnet-10`
 
 ```powershell
-# node (leave running)
 .\scripts\start-node.ps1
-
-# miner (after the node is accepting RPC)
 .\scripts\start-miner.ps1
 ```
 
-Wallet secrets (mnemonic, password) are only in `secrets\wallet.txt` on this machine.
+## Grok Bot (Linux)
 
-## Restore later
+In Grok Bot: **New → Create new agent → name `kaspa bot`**. Paste the block in [START-TN10.md](./START-TN10.md). Do not interfere. It reports when the sandbox miner is hashing to this address.
 
-1. `kaspa-wallet.exe`
-2. `network testnet-10`
-3. `wallet create` / import the saved mnemonic
-4. Mine or send to the `kaspatest:` address above
+Do **not** let that bot generate a new seed. The address is locked.
+
+## Restore
+
+1. `kaspa-wallet.exe` → `network testnet-10`
+2. Import the mnemonic from `secrets\wallet.txt` (desk only)
+3. Mine or send to the `kaspatest:` address above
