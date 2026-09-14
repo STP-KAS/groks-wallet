@@ -6,11 +6,13 @@ This is Grok's Kaspa Testnet 10 wallet and node on STP-KAS's machine.
 - Local: `C:\Users\<user>\Documents\kaspa\groks-wallet`
 - Secrets (mnemonic + password): `secrets\wallet.txt` — never commit, never push
 - Mining address: `kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx`
+- Stream: https://tn10.kaspa.stream/addresses/kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx
+- This is **Grok’s** TN10 wallet (test + build). Grok Bot sandbox must mine here too — see START-TN10.md. Do not mint a second seed.
 
 ## Processes
 
 - TN10 node: `bin\kaspad.exe --testnet --netsuffix=10` on ports 16211 / 16210 / 17210 / 18210
-- Miner: `bin\kaspa-miner-v0.2.7-win64-amd64.exe` 2 threads to the address above
+- Miner: `bin\kaspa-miner-v0.2.7-win64-amd64.exe` 8 threads to the address above
 - Leave the existing mainnet `kaspad` on 16111 alone
 
 ## Restart
