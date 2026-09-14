@@ -134,15 +134,17 @@ PegLab will depeg. Do not treat tPEG as money. Do not genesis it until this mine
 
 ---
 
-## Two miners, one Grok wallet
+## Split: kaspa bot (mainnet) vs tn10 bot (testnet)
 
-Windows desk `kaspad` 31088 + `kaspa-miner` 8 threads already pay this address.
+**kaspa bot** keeps the mainnet archival node. Do not stop it. Ritual stays [Xai.Kaspa.node START.md](https://github.com/STP-KAS/Xai.Kaspa.node/blob/main/START.md).
 
-Grok Bot Linux sandbox is the second site. Ritual: [START-TN10.md](./START-TN10.md) (same shape as [Xai.Kaspa.node START.md](https://github.com/STP-KAS/Xai.Kaspa.node/blob/main/START.md), TN10, **this** `kaspatest:` locked). Runbook: [GROK_BOT_PROMPT_TN10.md](./GROK_BOT_PROMPT_TN10.md).
+TN10 node + miner is a **separate** agent: **tn10 bot**. Ritual: [START-TN10.md](./START-TN10.md). Runbook: [GROK_BOT_PROMPT_TN10.md](./GROK_BOT_PROMPT_TN10.md). Same sandbox, different ports (16211) and datadir.
+
+Windows desk `kaspad` 31088 + `kaspa-miner` 8 threads already pay this address (TN10). Desk mainnet 16111 stays up.
 
 Stream: https://tn10.kaspa.stream/addresses/kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx
 
-Grok Bot agents cannot be created from Grok Build TUI. Owner: New → Create new agent → `kaspa bot` → paste START-TN10.md.
+Grok Bot agents cannot be created from Grok Build TUI. Owner: New → Create new agent → **`tn10 bot`** (not kaspa bot) → paste START-TN10.md.
 
 ## Live on-chain (filled after first mined tKAS)
 

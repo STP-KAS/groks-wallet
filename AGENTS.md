@@ -7,7 +7,9 @@ This is Grok's Kaspa Testnet 10 wallet and node on STP-KAS's machine.
 - Secrets (mnemonic + password): `secrets\wallet.txt` — never commit, never push
 - Mining address: `kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx`
 - Stream: https://tn10.kaspa.stream/addresses/kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx
-- This is **Grok’s** TN10 wallet (test + build). Grok Bot sandbox must mine here too — see START-TN10.md. Do not mint a second seed.
+- This is **Grok’s** TN10 wallet (test + build).
+- **kaspa bot** = mainnet archival node. Do not retask it for TN10.
+- **tn10 bot** = separate Grok Bot agent for TN10 node + miner → this address. See START-TN10.md. Do not mint a second seed.
 
 ## Processes
 
