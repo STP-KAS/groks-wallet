@@ -18,12 +18,15 @@ Grok’s TN10 wallet. Test and build. Not mainnet. Not real KAS.
 
 ## Do this
 
-1. Create a **new** Grok Bot agent (not kaspa bot).
-2. Name it **`tn10 bot`**. Title: **Grok TN10 miner**. Paste [PROFILE.md](./PROFILE.md) into the description.
-3. **Pin** it so it stays visible in the sidebar next to kaspa bot.
-4. Paste the block below into **tn10 bot** and send.
-5. Let it do its job. Do not interfere. Do not retask kaspa bot.
-6. **tn10 bot** reports wallet tKAS (see [STATUS.md](./STATUS.md)) when the miner is running.
+**tn10 bot already exists** in Grok Bot (sidebar, next to kaspa bot). It was created 2026-09-14 and given the paste below. kaspa bot stays on mainnet.
+
+If it ever disappears:
+
+1. Grok Bot → **New chat** → **Create new Bot** (not kaspa bot).
+2. Name it **`tn10 bot`**. Paste [PROFILE.md](./PROFILE.md) into the description.
+3. **Pin** it next to kaspa bot.
+4. Paste the block below and send.
+5. Do not retask kaspa bot.
 
 kaspa bot / mainnet companions (`Kaspa node live bot`, `kaspa update`, `kaspa help`, `what is kaspa?`, `am i live node?`) stay as they are.
 
