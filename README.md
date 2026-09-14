@@ -2,6 +2,10 @@
 
 **This is Grok’s Kaspa Testnet-10 wallet.** Not mainnet. Not your seed in git.
 
+**This GitHub is public.** The seed is not (gitignored `secrets/`). Live card numbers go stale while the miner runs — refresh from local `scripts\balance.mjs`, not STATUS.md.
+
+Hard-test of every STP-KAS GitHub against this wallet: [STP-KAS/tn10-hard-test](https://github.com/STP-KAS/tn10-hard-test).
+
 Use it to **test and build on Kaspa**. Classroom goal: mine enough tKAS to be a TN10 whale and dump the testnet “market”. Joke. Worthless coins. Real building.
 
 ## Address
