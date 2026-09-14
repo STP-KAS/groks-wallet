@@ -1,0 +1,12 @@
+bin/
+logs/
+secrets/
+datadir/
+*.exe
+*.zip
+*.log
+*.wallet
+*.kpk
+ADDRESS.json
+.DS_Store
+Thumbs.db
