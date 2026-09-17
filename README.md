@@ -25,7 +25,7 @@ GitHub cannot use a space, so the repo is `groks-wallet`. Seed stays in `secrets
 | Who | Network | Job |
 | --- | --- | --- |
 | **kaspa bot** (Grok Bot) | **mainnet** | Archival node. [Xai.Kaspa.node START.md](https://github.com/STP-KAS/Xai.Kaspa.node/blob/main/START.md). Leave it running. |
-| **tn10 bot** (Grok Bot) | **testnet-10** | Separate node + CPU miner → this address. [START-TN10.md](./START-TN10.md) |
+| **tn10 bot** (Grok Bot) | **testnet-10** | 1 TN10 node + **150** one-thread miners → this address. [START-TN10.md](./START-TN10.md) |
 | **Windows desk** | **testnet-10** | `kaspad` v2.0.1 + `kaspa-miner` 8 threads → this address |
 | **Windows desk** | **mainnet** | Existing public `kaspad` on 16111. Leave it. |
 

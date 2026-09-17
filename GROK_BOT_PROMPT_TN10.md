@@ -85,9 +85,13 @@ If still in IBD, leave the miner running; it waits, then hashes.
 
 Write `/tmp/kaspa-miner-tn10.addr` with the exact `kaspatest:` string above.
 
+### Miner farm
+
+Target **150** one-thread `kaspa-miner` processes under `/tmp/kaspa-tn10-miners/` (`miner-001` …), each `-t 1`, user-agent `gbNNN`, all to the locked address. Raise kaspad `--rpcmaxclients` to **200** (default 128 is the ceiling). Keepalive maintains the 150-miner farm. Honest count: `/tmp/kaspa-tn10-miners/status.json` field `alive`. 8 cores; load above 8 is expected. Do not mine mainnet.
+
 ### Keepalive
 
-Routine **`TN10 kaspad+miner 20m keepalive`** `@every 20m`: check **TN10** only; restart tn10 kaspad/miner/bore **only if down**; never wipe datadir; never change the mining address; **never restart mainnet kaspad**.
+Routine **`TN10 kaspad+miner 20m keepalive`** `@every 20m`: check **TN10** only; restart tn10 kaspad / the 150-miner farm / bore **only if down**; keep `alive ≈ 150`; never wipe datadir; never change the mining address; **never restart mainnet kaspad**.
 
 ---
 
