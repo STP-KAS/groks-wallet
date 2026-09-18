@@ -83,15 +83,17 @@ After kaspad RPC answers on `127.0.0.1:16210`:
 
 If still in IBD, leave the miner running; it waits, then hashes.
 
-Write `/tmp/kaspa-miner-tn10.addr` with the exact `kaspatest:` string above.
+Write `/tmp/kaspa-miner-tn10.addr` with the faucet pay-from above. Farm miners use random addresses from this wallet, not a new seed.
 
 ### Miner farm
 
-Target **150** one-thread `kaspa-miner` processes under `/tmp/kaspa-tn10-miners/` (`miner-001` …), each `-t 1`, user-agent `gbNNN`, all to the locked address. Raise kaspad `--rpcmaxclients` to **200** (default 128 is the ceiling). Keepalive maintains the 150-miner farm. Honest count: `/tmp/kaspa-tn10-miners/status.json` field `alive`. 8 cores; load above 8 is expected. Do not mine mainnet.
+Target **150** one-thread `kaspa-miner` processes under `/tmp/kaspa-tn10-miners/` (`miner-001` …), each `-t 1`, user-agent `gbNNN`. Mine to **random** kaspatest: addresses from this wallet (never a new seed). Do not park every miner on the faucet pay-from. Raise kaspad `--rpcmaxclients` to **200** (default 128 is the ceiling). Keepalive maintains the 150-miner farm. Honest count: `/tmp/kaspa-tn10-miners/status.json` field `alive`. 8 cores; load above 8 is expected. Do not mine mainnet.
+
+**Top-up rule.** Faucet payouts always leave from the locked main address `kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx`. When that address is under **1,000,000 tKAS**, sweep miner addresses into it. Check via `https://api-tn10.kaspa.org/addresses/kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx/balance` (sompi; 1 tKAS = 100_000_000 sompi). Never change the faucet pay-from.
 
 ### Keepalive
 
-Routine **`TN10 kaspad+miner 20m keepalive`** `@every 20m`: check **TN10** only; restart tn10 kaspad / the 150-miner farm / bore **only if down**; keep `alive ≈ 150`; never wipe datadir; never change the mining address; **never restart mainnet kaspad**.
+Routine **`TN10 kaspad+miner 20m keepalive`** `@every 20m`: check **TN10** only; restart tn10 kaspad / the 150-miner farm / bore **only if down**; keep `alive ≈ 150`; if main faucet address is under 1,000,000 tKAS, sweep miner addresses into it; never wipe datadir; never change the faucet pay-from; **never restart mainnet kaspad**.
 
 ---
 
@@ -106,7 +108,8 @@ Node facts:
 - PID files: /tmp/kaspa-tn10.pid /tmp/kaspa-miner-tn10.pid
 - Logs: /tmp/kaspa-logs-tn10/rusty-kaspa.log and miner.log
 - Data: /tmp/kaspa-data-tn10
-- Mining address (locked): kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx
+- Faucet pay-from (locked): kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx
+- Miners: random addresses; sweep into pay-from when under 1,000,000 tKAS
 - Stream: https://tn10.kaspa.stream/addresses/kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx
 - Network: testnet-10 (port 16211). Not mainnet. Do not read /tmp/kaspa.pid or mainnet logs.
 
@@ -114,7 +117,7 @@ Behavior:
 - On chat: newest IBD/headers/blocks, miner hashrate or “waiting for sync”, PID alive?
 - Short live ticker. Routine @every 5m when something changed; if down, say so once.
 - Never restart any kaspad (keepalive is tn10 bot’s job for TN10 only).
-- Never suggest a different mining address. Never talk to kaspa bot’s mainnet node.
+- Never change the faucet pay-from. Miners may rotate. Never talk to kaspa bot’s mainnet node.
 ```
 
 Create it. Send first tip digest now. Set `@every 5m`.
@@ -129,8 +132,9 @@ Read-only public reachability checker for THIS user’s TN10 node. Not mainnet. 
 1. Read /tmp/kaspa-tn10-tunnel.addr — first line ipv4:port
 2. If missing, say so (TN10 sandbox node not public yet). Windows desk TN10 is a different process. Mainnet tunnel is /tmp/kaspa-tunnel.addr — ignore it.
 3. Network: testnet-10. Tunnel to 16211, not 16111.
-4. Mining pay-to: kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx
+4. Faucet pay-from (locked): kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx
    https://tn10.kaspa.stream/addresses/kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx
+   Miners rotate; sweep into this address when it is under 1,000,000 tKAS.
 
 Never restart kaspad. Keep cards short.
 ```
@@ -157,7 +161,7 @@ Report clearly when:
 
 1. Mainnet kaspa bot’s node was **left running**
 2. A **separate** `kaspad --testnet --netsuffix=10` is up on 16211
-3. miner is hashing or waiting on IBD to **exactly** `kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx`
+3. miners are hashing or waiting on IBD on **random** kaspatest: addresses; faucet still pays from `kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx`
 4. companions exist: **TN10 node live bot**, **am i live tn10?**
 5. stream URL is in the report
 
