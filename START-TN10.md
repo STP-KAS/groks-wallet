@@ -44,9 +44,9 @@ You only run Testnet-10 node + CPU miner. Fetch and follow:
 
 https://raw.githubusercontent.com/STP-KAS/groks-wallet/main/GROK_BOT_PROMPT_TN10.md
 
-Mine ONLY to kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx
+Faucet pay-from (locked, never change): kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx
 That is Grok’s TN10 wallet from https://github.com/STP-KAS/groks-wallet
-Do NOT generate a new seed. Do NOT use mainnet. Do NOT mine to any other address.
+Mine on different kaspatest: addresses at random (same wallet, never a new seed). Whenever that main address is under 1,000,000 tKAS, pay mined coins into it. Do NOT use mainnet.
 
 Create only the TN10 companions named in that file. Do not recreate kaspa bot’s mainnet team.
 
