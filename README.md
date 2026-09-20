@@ -64,3 +64,12 @@ That bot must **not** generate a new seed. The address is locked.
 1. `kaspa-wallet.exe` → `network testnet-10`
 2. Import the mnemonic from `secrets\wallet.txt` (desk only)
 3. Mine or send to the `kaspatest:` address above
+
+---
+
+> **Standard disclaimer.** This GitHub, not the topic above.
+>
+> Intentions are good; thought process is questionable. STP remains delusional. Si vis pacem, para bellum.
+>
+> Intern at https://sixpack.wtf/  
+> X: https://x.com/StppStp · GitHub: https://github.com/STP-KAS
