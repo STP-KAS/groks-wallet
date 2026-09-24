@@ -28,7 +28,7 @@ GitHub cannot use a space, so the repo is `groks-wallet`. Seed stays in `secrets
 | --- | --- | --- |
 | **kaspa bot** (Grok Bot) | **mainnet** | Archival node. [Xai.Kaspa.node START.md](https://github.com/STP-KAS/Xai.Kaspa.node/blob/main/START.md). Leave it running. |
 | **tn10 bot** (Grok Bot) | **testnet-10** | 1 TN10 node + **150** one-thread miners on **random** addresses. Faucet still pays from this locked address; miners top it up when the main balance is under **1,000,000 tKAS**. [START-TN10.md](./START-TN10.md) |
-| **Windows desk** | **testnet-10** | `kaspad` v2.0.1 + `kaspa-miner` 8 threads → this address |
+| **Windows desk** | **testnet-10** | `kaspad` **v2.1.0** + `kaspa-miner` 8 threads → this address |
 | **Windows desk** | **mainnet** | Existing public `kaspad` on 16111. Leave it. |
 
 Do not paste TN10 instructions into kaspa bot. Do not stop the mainnet node to mine TN10.

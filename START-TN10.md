@@ -40,7 +40,12 @@ kaspa bot already runs the MAINNET archival node on this sandbox. Leave it alone
 - do not touch /tmp/kaspa-data-mainnet, /tmp/kaspa.pid, /tmp/kaspa-logs-mainnet, port 16111
 - do not mine mainnet
 
-You only run Testnet-10 node + CPU miner. Fetch and follow:
+You only run Testnet-10 node + CPU miner. The node software is Rusty Kaspa v2.1.0, the release in this post:
+https://x.com/orinewman/status/2102428533163192377
+https://github.com/kaspanet/rusty-kaspa/releases/tag/v2.1.0
+Not the old Go kaspad. Not v2.0.1. Do not delete the TN10 datadir to upgrade.
+
+Fetch and follow:
 
 https://raw.githubusercontent.com/STP-KAS/groks-wallet/main/GROK_BOT_PROMPT_TN10.md
 

@@ -42,17 +42,21 @@ Mainnet fresh start (kaspa bot): https://github.com/STP-KAS/Xai.Kaspa.node/blob/
 
 ### Node
 
-1. Prefetch official rusty-kaspa Linux amd64 `kaspad` (latest v2.x that speaks TN10). No source build unless download fails.
+1. Install official **Rusty Kaspa v2.1.0** Linux amd64 `kaspad`. Same release as mainnet: https://x.com/orinewman/status/2102428533163192377 → https://github.com/kaspanet/rusty-kaspa/releases/tag/v2.1.0
+   Zip: https://github.com/kaspanet/rusty-kaspa/releases/download/v2.1.0/rusty-kaspa-v2.1.0-linux-amd64.zip
+   Inside the zip: `bin/kaspad`. `kaspad --version` must print `kaspad 2.1.0`.
+   Not the old Go kaspad. Not v2.0.1. No source build unless that zip fails. Do not delete `/tmp/kaspa-data-tn10` to upgrade. Do not touch the mainnet binary at `/workspace/artifacts/kaspa/bin/kaspad`.
    - Binary: `/workspace/artifacts/kaspa-tn10/bin/kaspad`
-   - Miner: `/workspace/artifacts/kaspa-tn10/bin/kaspa-miner` (kaspanet/cpuminer v0.2.7 linux amd64)
+   - Miner: `/workspace/artifacts/kaspa-tn10/bin/kaspa-miner` (kaspanet/cpuminer v0.2.7 linux amd64 — not in the node zip)
    - Data: `/tmp/kaspa-data-tn10`
    - Logs: `/tmp/kaspa-logs-tn10` (`rusty-kaspa.log`, `miner.log`)
    - PIDs: `/tmp/kaspa-tn10.pid` `/tmp/kaspa-miner-tn10.pid`
 2. Start:
 
 ```
-./kaspad --testnet --netsuffix=10 --utxoindex \
+/workspace/artifacts/kaspa-tn10/bin/kaspad --yes --testnet --netsuffix=10 --utxoindex \
   --appdir=/tmp/kaspa-data-tn10 \
+  --logdir=/tmp/kaspa-logs-tn10 \
   --listen=0.0.0.0:16211 \
   --rpclisten=127.0.0.1:16210 \
   --rpclisten-borsh=127.0.0.1:17210 \
@@ -60,7 +64,7 @@ Mainnet fresh start (kaspa bot): https://github.com/STP-KAS/Xai.Kaspa.node/blob/
   --ram-scale=0.3 --outpeers=8 --maxinpeers=32
 ```
 
-Not `--archival` (disk). Not mainnet ports. RPC localhost only.
+Not `--archival` (disk). Not mainnet ports. RPC localhost only. v2.1.0 chunk lines (`Received pruning point proof chunk`, `Received trusted data chunk`, `IBD: Processed`) are sync progress, not a crash. Tip-following looks like `Accepted block … via relay`.
 
 3. Keep `--ram-scale=0.3` so you do not starve kaspa bot’s mainnet node. If the sandbox OOMs, lower TN10 first, never kill mainnet.
 4. After IBD / tip-following, optionally go public on **16211** only:
