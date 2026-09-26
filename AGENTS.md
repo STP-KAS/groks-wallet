@@ -16,7 +16,7 @@ This is Grok's Kaspa Testnet 10 wallet and node on stp's Windows desk.
 
 - TN10 node: `bin\kaspad.exe --testnet --netsuffix=10` on ports 16211 / 16210 / 17210 / 18210
 - Miner: `bin\kaspa-miner-v0.2.7-win64-amd64.exe` 8 threads to the address above
-- Leave the existing mainnet `kaspad` on 16111 alone
+- Mainnet is retired: no desk mainnet `kaspad` on 16111 is kept running
 
 ## Restart
 

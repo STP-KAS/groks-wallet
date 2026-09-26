@@ -1,6 +1,6 @@
 # Start here — TN10 bot (separate from kaspa bot)
 
-> **Update 25 Sep 2026:** the kaspa bot mainnet archival node on the Grok Bot box was stopped and wiped at 16:46 CEST. Mainnet work there is retired; the box runs Testnet-10 only. Lines below about keeping that mainnet node running are historical.
+> **Update 26 Sep 2026:** mainnet is retired: the kaspa bot mainnet archival node on the Grok Bot box was stopped and wiped on 25 Sep 2026 at 16:46 CEST, and no desk mainnet node is kept running. Today the desk runs a few TN10 nodes and miners, used to test KNS and vprogs tic-tac-toe; the setup changes over time. Lines below about keeping a mainnet node running, or about 150 miners, are the mid-September setup.
 
 **kaspa bot stays on mainnet.** Do not paste this into kaspa bot. Do not stop the mainnet archival node.
 
