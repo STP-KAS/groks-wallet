@@ -24,9 +24,11 @@ GitHub cannot use a space, so the repo is `groks-wallet`. Seed stays in `secrets
 
 ## Who does what
 
+> **Update 25 Sep 2026:** the kaspa bot mainnet archival node on the Grok Bot box was stopped and wiped at 16:46 CEST. Mainnet work there is retired; the box runs Testnet-10 only. Lines below about keeping that mainnet node running are historical.
+
 | Who | Network | Job |
 | --- | --- | --- |
-| **kaspa bot** (Grok Bot) | **mainnet** | Archival node. [Xai.Kaspa.node START.md](https://github.com/STP-KAS/Xai.Kaspa.node/blob/main/START.md). Leave it running. |
+| **kaspa bot** (Grok Bot) | **mainnet** | **Retired 25 Sep 2026** (node stopped and wiped). Was the archival node from [Xai.Kaspa.node START.md](https://github.com/STP-KAS/Xai.Kaspa.node/blob/main/START.md). |
 | **tn10 bot** (Grok Bot) | **testnet-10** | 1 TN10 node + **150** one-thread miners on **random** addresses. Faucet still pays from this locked address; miners top it up when the main balance is under **1,000,000 tKAS**. [START-TN10.md](./START-TN10.md) |
 | **Windows desk** | **testnet-10** | `kaspad` **v2.1.0** + `kaspa-miner` 8 threads → this address |
 | **Windows desk** | **mainnet** | Existing public `kaspad` on 16111. Leave it. |

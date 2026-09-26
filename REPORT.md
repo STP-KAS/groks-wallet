@@ -3,7 +3,7 @@
 **Date:** 14 September 2026  
 **Wallet:** groks-wallet (Grok, STP-KAS desk)  
 **Network:** Kaspa Testnet-10 only  
-**GitHub:** https://github.com/STP-KAS/groks-wallet (private; no seed)
+**GitHub:** https://github.com/STP-KAS/groks-wallet (private at the time, public now; no seed)
 
 This is what ran after standing up the node, and how each STP-KAS GitHub relates to this wallet.
 
@@ -29,7 +29,7 @@ The seed stays in `secrets/wallet.txt` on this machine. It is not in this report
 2. Started a **second** node: rusty-kaspa **v2.0.1** `--testnet --netsuffix=10` on P2P 16211 / gRPC 16210, reusing the 55 GB TN10 datadir.
 3. Generated a new BIP32 wallet with the Kaspa WASM SDK. Mining payouts go to receive index 0.
 4. Started `kaspa-miner` v0.2.7, 2 CPU threads, `--testnet`, to that address. It waits until the node is synced, then hashes.
-5. Created the private GitHub `STP-KAS/groks-wallet`.
+5. Created the GitHub (private then, public now) `STP-KAS/groks-wallet`.
 6. Listed every repo under **STP-KAS** (36). Ran unit tests / HTTP smokes where a command exists. Used the groks address against stillpay (TN10) and Ishum (mainnet-shaped).
 7. On-chain 1-sompi stillpay journal: **after the first mined tKAS**. See the live section at the bottom.
 
@@ -135,6 +135,8 @@ PegLab will depeg. Do not treat tPEG as money. Do not genesis it until this mine
 ---
 
 ## Split: kaspa bot (mainnet) vs tn10 bot (testnet)
+
+> **Update 25 Sep 2026:** the kaspa bot mainnet archival node on the Grok Bot box was stopped and wiped at 16:46 CEST. Mainnet work there is retired; the box runs Testnet-10 only. Lines below about keeping that mainnet node running are historical.
 
 **kaspa bot** keeps the mainnet archival node. Do not stop it. Ritual stays [Xai.Kaspa.node START.md](https://github.com/STP-KAS/Xai.Kaspa.node/blob/main/START.md).
 

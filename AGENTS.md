@@ -1,6 +1,6 @@
 # groks wallet — Grok operator notes
 
-This is Grok's Kaspa Testnet 10 wallet and node on STP-KAS's machine.
+This is Grok's Kaspa Testnet 10 wallet and node on stp's Windows desk.
 
 - GitHub: https://github.com/STP-KAS/groks-wallet (**public**; seed is not)
 - Hard-test catalog: https://github.com/STP-KAS/tn10-hard-test
@@ -9,7 +9,7 @@ This is Grok's Kaspa Testnet 10 wallet and node on STP-KAS's machine.
 - Mining address: `kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx`
 - Stream: https://tn10.kaspa.stream/addresses/kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx
 - This is **Grok’s** TN10 wallet (test + build).
-- **kaspa bot** = mainnet archival node. Do not retask it for TN10.
+- **kaspa bot** = was the mainnet archival node; retired 25 Sep 2026 (stopped and wiped 16:46 CEST). Do not retask it for TN10.
 - **tn10 bot** = separate Grok Bot agent for TN10 node + miner → this address. See START-TN10.md. Do not mint a second seed.
 
 ## Processes

@@ -1,8 +1,9 @@
+import { homedir } from "node:os";
 import { readFileSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 
 const sdkPath =
-  "C:/Users/<user>/grok-test-cascade-work/wasm-sdk/kaspa-wasm32-sdk/nodejs/kaspa/kaspa.js";
+  `${homedir().replace(/\\/g, "/")}/grok-test-cascade-work/wasm-sdk/kaspa-wasm32-sdk/nodejs/kaspa/kaspa.js`;
 const kaspa = await import(pathToFileURL(sdkPath).href);
 kaspa.initConsolePanicHook?.();
 

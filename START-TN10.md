@@ -1,5 +1,7 @@
 # Start here — TN10 bot (separate from kaspa bot)
 
+> **Update 25 Sep 2026:** the kaspa bot mainnet archival node on the Grok Bot box was stopped and wiped at 16:46 CEST. Mainnet work there is retired; the box runs Testnet-10 only. Lines below about keeping that mainnet node running are historical.
+
 **kaspa bot stays on mainnet.** Do not paste this into kaspa bot. Do not stop the mainnet archival node.
 
 TN10 node + miner is a **different** Grok Bot agent. Same Linux sandbox is fine (different ports and datadir). Windows desk already runs TN10 too.
