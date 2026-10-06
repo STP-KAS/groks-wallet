@@ -1,77 +1,13 @@
-> **Experimental only. Not a product.**
->
-> Do not use wallet integrations on this GitHub. STP remains a clown. [DISCLAIMER.md](DISCLAIMER.md)
+# TN10 wallets
 
-# groks wallet
+## Grok Build
 
-**This is Grok’s Kaspa Testnet-10 wallet.** Not mainnet. Not your seed in git.
+`kaspatest:qp4jge54eztxewf8r53rtjdvxakmatsu6tjd0nn9sjhgvzxknsfvjvmwurqhd`
 
-**This GitHub is public.** The seed is not (gitignored `secrets/`). Live card numbers go stale while the miner runs — refresh from local `scripts\balance.mjs`, not STATUS.md.
+[Kaspa Stream TN10](https://tn10.kaspa.stream/addresses/kaspatest:qp4jge54eztxewf8r53rtjdvxakmatsu6tjd0nn9sjhgvzxknsfvjvmwurqhd)
 
-Hard-test of every STP-KAS GitHub against this wallet: [STP-KAS/tn10-hard-test](https://github.com/STP-KAS/tn10-hard-test).
+## Grok Bot
 
-Use it to **test and build on Kaspa**. Classroom goal: mine enough tKAS to be a TN10 whale and dump the testnet “market”. Joke. Worthless coins. Real building.
+`kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx`
 
-## Address
-
-```
-kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx
-```
-
-**Live:** [tn10.kaspa.stream — groks wallet](https://tn10.kaspa.stream/addresses/kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx)
-
-GitHub cannot use a space, so the repo is `groks-wallet`. Seed stays in `secrets/` on the Windows desk (gitignored).
-
-## Who does what
-
-> **Update 26 Sep 2026:** mainnet is retired: the kaspa bot mainnet archival node on the Grok Bot box was stopped and wiped on 25 Sep 2026 at 16:46 CEST, and no desk mainnet node is kept running. Today the desk runs a few TN10 nodes and miners, used to test KNS and vprogs tic-tac-toe; the setup changes over time. Lines below about keeping a mainnet node running, or about 150 miners, are the mid-September setup.
-
-| Who | Network | Job |
-| --- | --- | --- |
-| **kaspa bot** (Grok Bot) | **mainnet** | **Retired 25 Sep 2026** (node stopped and wiped). Was the archival node from [Xai.Kaspa.node START.md](https://github.com/STP-KAS/Xai.Kaspa.node/blob/main/START.md). |
-| **tn10 bot** (Grok Bot) | **testnet-10** | A few TN10 nodes and miners, used to test KNS and vprogs tic-tac-toe; the setup changes over time. Faucet still pays from this locked address; miners top it up when the main balance is under **1,000,000 tKAS**. [START-TN10.md](./START-TN10.md) |
-| **Windows desk** | **testnet-10** | `kaspad` **v2.1.0** + `kaspa-miner` 8 threads → this address |
-| **Windows desk** | **mainnet** | Retired. Mainnet is retired; no desk mainnet node is kept running. |
-
-Do not paste TN10 instructions into kaspa bot. Mainnet is retired.
-
-TN10 ports: P2P **16211**. Mainnet: **16111**.
-
-## Desk TN10
-
-| Process | Ports |
-| --- | --- |
-| `kaspad.exe` `--testnet --netsuffix=10 --utxoindex` | P2P `16211`, gRPC `127.0.0.1:16210`, Borsh `17210`, JSON `18210` |
-| `kaspa-miner` v0.2.7 `-t 8 --user-agent-suffix grokwallet` | local gRPC `16210` |
-
-Datadir: `%LOCALAPPDATA%\rusty-kaspa\kaspa-testnet-10`
-
-```powershell
-.\scripts\start-node.ps1
-.\scripts\start-miner.ps1
-```
-
-## Grok Bot — tn10 bot
-
-**tn10 bot is in the Grok Bot sidebar** (created 2026-09-14). kaspa bot stays on **mainnet**. tn10 bot is a second row: TN10 node + miners on random addresses; sweep into this address when it is under 1,000,000 tKAS.
-
-If you do not see it: **New chat → Create new Bot**, name `tn10 bot`, paste [START-TN10.md](./START-TN10.md).
-
-Live card: [STATUS.md](./STATUS.md)
-
-That bot must **not** generate a new seed. The address is locked.
-
-## Restore
-
-1. `kaspa-wallet.exe` → `network testnet-10`
-2. Import the mnemonic from `secrets\wallet.txt` (desk only)
-3. Mine or send to the `kaspatest:` address above
-
----
-
-> **Standard disclaimer.** This GitHub, not the topic above.
->
-> Intentions are good; thought process is questionable. STP remains delusional. Si vis pacem, para bellum.
->
-> Intern at https://sixpack.wtf/  
-> X: https://x.com/StppStp · GitHub: https://github.com/STP-KAS
+[Kaspa Stream TN10](https://tn10.kaspa.stream/addresses/kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx)
