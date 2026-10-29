@@ -1,5 +1,7 @@
 # TN10 wallets
 
+TN10 wallets. Grok Build, Grok Bot and stp mini wallet.
+
 ## Grok Build wallet
 
 `kaspatest:qp4jge54eztxewf8r53rtjdvxakmatsu6tjd0nn9sjhgvzxknsfvjvmwurqhd`
