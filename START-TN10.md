@@ -6,7 +6,7 @@
 
 TN10 node + miner is a **different** Grok Bot agent. Same Linux sandbox is fine (different ports and datadir). Windows desk already runs TN10 too.
 
-Mainnet ritual (leave it): [STP-KAS/Xai.Kaspa.node START.md](https://github.com/STP-KAS/Xai.Kaspa.node/blob/main/START.md)
+Mainnet ritual (leave it): [STP-KAS/Xsi.Kaspa.node START.md](https://github.com/STP-KAS/Xsi.Kaspa.node/blob/main/START.md)
 
 ## Mining address (do not change)
 

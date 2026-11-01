@@ -69,11 +69,11 @@ PegLab genesis wants **2.01 tKAS**. One CPU-mined block may or may not cover tha
 | kaspa-data-vault | `C:\Users\<user>\kaspa-data-vault` | `go test ./...` | **pass** |
 | kaspa-till | `Documents\kaspa\superappstablesalternative` | `go test ./...` | **pass** |
 | gramlane | `Documents\kaspa\superapp` | `go test ./...` | **pass** |
-| xai-reasoning-3 | `Documents\kaspa\xai-reasoning-3` | `go test ./...` | **pass** |
+| xsi-reasoning-3 | `Documents\kaspa\xsi-reasoning-3` | `go test ./...` | **pass** |
 | grok-kaspa-collab | `Documents\kaspa\grok-kaspa-collab\desk` | `go test ./...` | **pass** |
 | wallet-integration | `C:\Users\<user>\wallet-integration` | `npm test` | **pass**. Inject only; never asks for this seed |
 | kaachat-desktop | `C:\Users\<user>\kaachat-desktop` | `npm test` | **pass** |
-| argent-xai | `Documents\kaspa\argent-xai` | `check.ps1` | **pass** (pins match freeze) |
+| argent-xsi | `Documents\kaspa\argent-xsi` | `check.ps1` | **pass** (pins match freeze) |
 | dagknight-test-grok | `C:\Users\<user>\dagknight-test-grok` | `cargo test` | **8 pass / 0 fail** |
 
 ---
@@ -101,13 +101,13 @@ PegLab genesis wants **2.01 tKAS**. One CPU-mined block may or may not cover tha
 | [gramlane](https://github.com/STP-KAS/gramlane) | Grams / KIP-21 desk. Tests pass |
 | [wallet-integration](https://github.com/STP-KAS/wallet-integration) | Kasware/Kastle inject catalog. Never takes this seed |
 | [kaachat-desktop](https://github.com/STP-KAS/kaachat-desktop), [stp-kachat](https://github.com/STP-KAS/stp-kachat), [kachat-test-with-silver](https://github.com/STP-KAS/kachat-test-with-silver) | Wallet-login chat. npm test on desktop pass. Handshake needs Kasware/Kastle, not this CLI key |
-| [xai-reasoning-3](https://github.com/STP-KAS/xai-reasoning-3) | Dual-rail EUR till + optional kaspa QR. Tests pass |
+| [xsi-reasoning-3](https://github.com/STP-KAS/xsi-reasoning-3) | Dual-rail EUR till + optional kaspa QR. Tests pass |
 | [grok-kaspa-collab](https://github.com/STP-KAS/grok-kaspa-collab) | Desk / QR. Tests pass |
 | [windows-p2p-node-guide](https://github.com/STP-KAS/windows-p2p-node-guide) | Mainnet 16111 public node. Followed: did **not** second-bind 16111 |
-| [Xai.Kaspa.node](https://github.com/STP-KAS/Xai.Kaspa.node) | Mainnet archival node prompt. Not this TN10 process |
+| [Xsi.Kaspa.node](https://github.com/STP-KAS/Xsi.Kaspa.node) | Mainnet archival node prompt. Not this TN10 process |
 | [rusty-kaspa](https://github.com/STP-KAS/rusty-kaspa) | Full node fork. Used the **v2.0.1 release binary**, did not rebuild the fork |
 | [dagknight-test-grok](https://github.com/STP-KAS/dagknight-test-grok) | Confirmation-policy tests. 8 pass. Not a wallet |
-| [argent-xai](https://github.com/STP-KAS/argent-xai) | Pin recheck. Pass |
+| [argent-xsi](https://github.com/STP-KAS/argent-xsi) | Pin recheck. Pass |
 | [peglab-poc](https://github.com/STP-KAS/peglab-poc) | Receipt engine sister. Tests pass |
 | [kaspaexplained-delusional-stp](https://github.com/STP-KAS/kaspaexplained-delusional-stp) / [mixer-concept](https://github.com/STP-KAS/mixer-concept) | Education sites. No `npm test` script |
 | [gramlanepeglab](https://github.com/STP-KAS/gramlanepeglab) | Darwin scorecard site. Servable, not a spender |
@@ -138,7 +138,7 @@ PegLab will depeg. Do not treat tPEG as money. Do not genesis it until this mine
 
 > **Update 25 Sep 2026:** the kaspa bot mainnet archival node on the Grok Bot box was stopped and wiped at 16:46 CEST. Mainnet work there is retired; the box runs Testnet-10 only. Lines below about keeping that mainnet node running are historical.
 
-**kaspa bot** keeps the mainnet archival node. Do not stop it. Ritual stays [Xai.Kaspa.node START.md](https://github.com/STP-KAS/Xai.Kaspa.node/blob/main/START.md).
+**kaspa bot** keeps the mainnet archival node. Do not stop it. Ritual stays [Xsi.Kaspa.node START.md](https://github.com/STP-KAS/Xsi.Kaspa.node/blob/main/START.md).
 
 TN10 node + miner is a **separate** agent: **tn10 bot**. Ritual: [START-TN10.md](./START-TN10.md). Runbook: [GROK_BOT_PROMPT_TN10.md](./GROK_BOT_PROMPT_TN10.md). Same sandbox, different ports (16211) and datadir.
 
